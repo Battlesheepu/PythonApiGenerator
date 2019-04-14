@@ -1,0 +1,5 @@
+{% if decorator %}
+@{{decorator.name}}{% if decorator.args %}({{decorator.args}}){%endif%}
+{% endif -%}
+def {{name}}({% for func_arg in func_args %}{{func_arg.name}}{% endfor %}):
+    pass

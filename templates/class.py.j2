@@ -1,0 +1,4 @@
+class {{name}}:
+    {% for attribute in attributes %}
+    {{ attribute.name }} = {{ attribute.value }}
+    {% endfor %}

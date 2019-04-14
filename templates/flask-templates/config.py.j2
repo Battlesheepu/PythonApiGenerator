@@ -1,0 +1,14 @@
+class Config:
+    DEBUG = False
+    TESTING = False
+
+class ProductionConfig(Config):
+    ENV = 'production'
+
+class DevelopmentConfig(Config):
+    DEBUG = True
+    ENV = 'development'
+
+class TestingConfig(Config):
+    ENV = 'testing'
+    TESTING = True

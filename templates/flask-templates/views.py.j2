@@ -1,0 +1,23 @@
+from flask.views import View
+from flask import Blueprint
+
+from app import serializers
+
+api = Blueprint('api', __name__)
+
+{% for model in models %}
+@api.route(model.slug))
+class {{model.name | title}}View(View):
+    def get(self, resource_id):
+        pass
+
+    def post(self, data):
+        pass
+
+    def put(self, resource_id, data):
+        pass
+
+    def delete(self, resource_id):
+        pass
+
+{% endfor %}
